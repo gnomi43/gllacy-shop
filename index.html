@@ -17,14 +17,18 @@
                     <li><a href="about-company.html">О Компании</a></li>
                 </ul>
                 <ul>
-                    <li> <!-- Здесь будет форма -->поиск</li>
-                    <li><a class="login-link">Вход</a></li>
-                    <li><a class="cart-link">Корзина</a></li>
+                    <li><button class="search-button" type="button">
+                            <img src="img/search.svg" alt="Иконка поиска">
+                        </button>
+                    </li>
+                    <li><button class="login-button"  type="button">Вход</button></li>
+                    <li><button class="cart-button"  type="button">Корзина</button></li>
                 </ul>
            </nav>
            <p class="info-header">
             С 10 до 20, ежедневно
             <span class="info-header-contact"> 8 812 450-25-25</span>
+            
            </p>
         </header>
         <main class="main-container">
@@ -179,14 +183,20 @@
                     <img src="img/sherbet-background.jpg" alt="Изображение фруктового щербета">
                 </article>
                 <section class="subscription">
-                    <h2 class="visually-hidden">Подписка</h2>
+                    <h2 class="visually-hidden">Подписка на расслыку</h2>
                     <p>
                         Подпишитесь на нашу сладкую рассылку и будете всегда в курсе 
                         всего самого вкусного, что у нас происходит. Обещаем не спамить 
                         и не слать всякой ненужной ерунды. Честно =) 
                     </p>
-                    <button class="button button-sub">Отправить</button>
-                    <!-- Здесь будет форма -->
+                    <p>
+                        <form action="">
+                            <label class="visually-hidden" for="subscription-email">Электронная почта</label>
+                            <input type="email" name="subscription" id="subscription-email" 
+                            placeholder="Электронная почта" aria-label="Для подписки на нашу рассылку введите электронную почту" >
+                            <button type="submit" class="button button-sub">Отправить</button>
+                        </form>
+                    </p>
                 </section>
                 <section class="map-contact"> 
                     <div class="map-location">
@@ -244,7 +254,7 @@
             </ul>
             <div>
                 <a href="https://htmlacademy.ru">
-                    <img src="logo/html-logo.svg" width="108" height="39"
+                    <img src="img/html-logo.svg" width="108" height="39"
                         alt="Логотип HTML-Academy">
                 </a>
                 <p>
@@ -255,11 +265,25 @@
 
         <section class="modal modal-feedback">
             <h2 class="visually-hidden">Обратная связь</h2>
-            <p>
-                <b>Мы обязательно вам овтетим</b>
-            </p>
-            <span class="button button-modal-send">Отправить</span>
-            <span class="modal-close">x</span>
+            <p><b>Мы обязательно вам овтетим</b></p>
+            <form class="modal" action="https://echo.htmlacademy.ru" method="POST">
+                <p>
+                    <label class="visually-hidden" for="feedback-name">Ваше имя</label>
+                    <input type="text" name="name" id="feedback-name" placeholder="Как вас зовут?">
+                </p>
+                <p>
+                    <label class="visually-hidden" for="feedback-email">Ваша электронная почта</label>
+                    <input type="email" name="email" id="feedback-email" placeholder="Ваша почта для связи">
+                </p>
+                <p>
+                    <label class="visually-hidden" for="feedback-info">Введите сообщение</label>
+                    <input type="text" name="info" id="feedback-info" placeholder="Напишите что-нибудь...">
+                </p>
+                <button type="submit" class="button button-modal-send">Отправить</button>
+            </form>
+            <button type="button" class="modal-close">
+                <img src="img/cross-close.svg" alt="Кнопка закрытия окна отбратной связи">
+            </button>
         </section>
         <section class=" modal modal-menu">
             <ul class="modal-menu-list">
@@ -271,19 +295,37 @@
             </ul>
         </section>
         <section class="modal modal-login">
-                    <!--Здесь будет форма-->
-            <span class="modal-join">Войти</span>
-            <ul class="modal-login-controls">
-                <li><a href="#">Забыли пароль?</a></li>
-                <li><a href="#">Новая регистрация</a></li>
-            </ul>
+            <h3 class="visually-hidden">Вход в личный кабинет</h3>
+            <form class="modal-login" action="https://echo.htmlacademy.ru" method="POST">
+                <p>
+                    <label for="login-input" class="visually-hidden">Электронная почта</label>
+                        <input type="email" class="login-input" name="login" placeholder="Электронная почта" 
+                        id="login-input" aria-label="Введите электронную почту">
+                </p>
+                <p>
+                    <label for="paswword-input" class="visually-hidden">Пароль</label>
+                        <input type="password" class="paswword-input" name="password" placeholder="Пароль" 
+                        id="paswword-input" aria-label="Введите пароль">
+                </p>
+                <p>
+                    <button type="submit" class="modal-join">Войти</button>
+                    <ul class="modal-login-controls">
+                        <li><a href="#">Забыли пароль?</a></li>
+                        <li><a href="#">Новая регистрация</a></li>
+                    </ul>
+                </p>
+            </form>
         </section>
         <section class="modal modal-search">
-            <!-- Здесь будет форма -->
+            <form class="modal-search" action="https://echo.academy.ru" method="POST">
+                <label for="site-search" class="visually-hidden">Поиск</label>
+                <input type="search" name="search" id="site-search" placeholder="Что ищем?" aria-label="Поиск по сайту">
+            </form>
         </section>
         <section class="modal moda-cart">
-            <!-- Здесь будет форма -->
-            <span class="button button-checkout">Оформить заказ</span>
+            <form action=""></form>
+            <!-- ФОРМА ДЛЯ КОРЗИНЫ -->
+            <button type="submit" class="button button-checkout">Оформить заказ</button>
         </section>
     </body>
 </html>
