@@ -17,7 +17,11 @@
                     <li><a href="about-company.html">О Компании</a></li>
                 </ul>
                 <ul>
-                    <li> <!-- Здесь будет форма -->поиск</li>
+                    <li>
+                        <button class="search-button" type="button">
+                            <img src="img/search.svg" alt="Иконка поиска">
+                        </button>
+                    </li>
                     <li><a class="login-link">Вход</a></li>
                     <li><a class="cart-link">Корзина</a></li>
                 </ul>
@@ -36,7 +40,74 @@
             </ul>
             <h2>Сливочное мороженное</h2>
             <section class="filters">
-                <!-- Здесь будет форма -->
+                <form action="https://echo.htmlacademy.ru" method="GET">
+                    <fieldset>
+                        <Legend>Сортировка:</Legend>
+                            <p>
+                                <select class="filter-sorting" name="sorting">
+                                    <option value="popularity">по популярности</option>
+                                    <option value="first-inexpensive">сначала недорогие</option>
+                                    <option value="first-expensive">сначала дорогие</option>
+                                    <option value="fat">по жирности</option>
+                                </select>
+                            </p>
+                        </ul>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Цена</legend>
+                        <input class="filter-range" type="range-min-max" name="price"
+                        min="0" max="1000" step="100" value="0">
+                        <input class="filter-range" type="range-max" name="price"
+                        min="0" max="1000" step="100" value="1000">
+                    </fieldset>
+                    <fieldset>
+                        <legend>Жирность:</legend>
+                        <ul>
+                            <li>
+                                <input class="vissualy-hidden" type="radio" name="fat" id="fat-value-0" checked>
+                                <label for="fat-value-0">0%</label>
+                            </li>
+                            <li>
+                                <input class="vissualy-hidden" type="radio" name="fat" id="fat-value-10">
+                                <label for="fat-value-10">до 10%</label>
+                            </li>
+                            <li>
+                                <input class="vissualy-hidden" type="radio" name="fat" id="fat-value-30">
+                                <label for="fat-value-30">до 30%</label>
+                            </li>
+                            <li>
+                                <input class="vissualy-hidden" type="radio" name="fat" id="fat-value-more">
+                                <label for="fat-value-more">выше 30%</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Наполнители:</legend>
+                        <ul class="fillers">
+                            <li>
+                                <input class="visually-hidden" type="checkbox" name="chocolate" id="fillers-chocolate" checked>
+                                <label for="fillers-chocolate">Шоколадные</label>
+                            </li>
+                            <li>
+                                <input class="visually-hidden" type="checkbox" name="shugar" id="fillers-shugar" checked>
+                                <label for="fillers-shugar">Сахарные прсыпки</label>
+                            </li>
+                            <li>
+                                <input class="visually-hidden" type="checkbox" name="fruits" id="fillers-fruits">
+                                <label for="fillers-fruits">Фрукты</label>
+                            </li>
+                            <li>
+                                <input class="visually-hidden" type="checkbox" name="syrups" id="fillers-syrups">
+                                <label for="fillers-syrups">Сиропы</label>
+                            </li>
+                            <li>
+                                <input class="visually-hidden" type="checkbox" name="jams" id="fillers-jams">
+                                <label for="fillers-jams">Джемы</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <button class="button button-filters" type="submit">Применить</button>
+                </form>
             </section>
             
             <section class="catalog">
@@ -254,7 +325,7 @@
             </ul>
             <div>
                 <a href="https://htmlacademy.ru">
-                    <img src="logo/html-logo.svg" width="108" height="39"
+                    <img src="img/html-logo.svg" width="108" height="39"
                         alt="Логотип HTML-Academy">
                 </a>
                 <p>
@@ -263,37 +334,47 @@
             </div>
         </footer>
 
-        <section class="modal modal-feedback">
-            <h2 class="visually-hidden">Обратная связь</h2>
-            <p>
-                <b>Мы обязательно вам овтетим</b>
-            </p>
-            <span class="button button-modal-send">Отправить</span>
-            <span class="modal-close">x</span>
-        </section>
         <section class=" modal modal-menu">
             <ul class="modal-menu-list">
                 <li><a class="modal-menu-item" href="#"><b>Новинки</b></a></li>
                 <li><a class="modal-menu-item" href="#">Сливочное</a></li>
-                <li><a class="modal-menu-item-active" href="#">Щербеты</a></li>
+                <li><a class="modal-menu-item" href="#">Щербеты</a></li>
                 <li><a class="modal-menu-item" href="#">Фруктовый лёд</a></li>
                 <li><a class="modal-menu-item" href="#">Мелорин</a></li>
             </ul>
         </section>
         <section class="modal modal-login">
-            <!--Здесь будет форма-->
-            <span class="modal-join">Войти</span>
-            <ul class="modal-login-controls">
-                <li><a href="#">Забыли пароль?</a></li>
-                <li><a href="#">Новая регистрация</a></li>
-            </ul>
+            <h3 class="visually-hidden">Вход в личный кабинет</h3>
+            <form class="modal-login" action="https://echo.htmlacademy.ru" method="POST">
+                <p>
+                    <label for="login-input" class="visually-hidden">Электронная почта</label>
+                        <input type="email" class="login-input" name="login" placeholder="Электронная почта" 
+                        id="login-input" aria-label="Введите электронную почту">
+                </p>
+                <p>
+                    <label for="paswword-input" class="visually-hidden">Пароль</label>
+                        <input type="password" class="paswword-input" name="password" placeholder="Пароль" 
+                        id="paswword-input" aria-label="Введите пароль">
+                </p>
+                <p>
+                    <button type="submit" class="modal-join">Войти</button>
+                    <ul class="modal-login-controls">
+                        <li><a href="#">Забыли пароль?</a></li>
+                        <li><a href="#">Новая регистрация</a></li>
+                    </ul>
+                </p>
+            </form>
         </section>
         <section class="modal modal-search">
-            <!-- Здесь будет форма -->
+            <form class="modal-search" action="https://echo.academy.ru" method="POST">
+                <label for="site-search" class="visually-hidden">Поиск</label>
+                <input type="search" name="search" id="site-search" placeholder="Что ищем?" aria-label="Поиск по сайту">
+            </form>
         </section>
         <section class="modal moda-cart">
-            <!-- Здесь будет форма -->
-            <span class="button button-checkout">Оформить заказ</span>
+            <form action=""></form>
+            <!-- ФОРМА ДЛЯ КОРЗИНЫ -->
+            <button type="submit" class="button button-checkout">Оформить заказ</button>
         </section>
     </body>
 </html>
