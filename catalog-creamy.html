@@ -373,15 +373,12 @@
                 <input type="search" name="search" id="site-search" placeholder="Что ищем?" aria-label="Поиск по сайту">
             </form>
         </section>
-        <section class="modal moda-cart">
+        <section class="modal modal-cart">
             <form action="https://echo.htmlacademy.ru">
-                <table border="2px solid black">
+                <table>
                         <tr>
                             <td>
-                                <button type="button">
-                                    <img src="img/cross-close.svg" alt="Кнопка удаления товара"width="11" height="11">
-
-                                </button>
+                                <button type="button"></button>
                             </td>
                             <td>
                                 <img src="img/product-10.jpg" alt="Картинка пломбира с апельсиновым джемом" width="33" height="33">
@@ -389,14 +386,31 @@
                             <td>
                                 Пломбира с апельсиновым джемом
                             </td>
-                            <td>1.5кг&#xD7;</td>
-                            <td>200руб</td>
-                            <td>300 руб.</td>
+                            <td>1.5кг &#xD7;</td>
+                            <td class="weight-price">200 руб</td>
+                            <td>300 руб</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button type="button"></button>
+                            </td>
+                            <td>
+                                <img src="img/product-11.jpg" alt="Картинка пломбира с апельсиновым джемом" width="33" height="33">
+                            </td>
+                            <td>
+                                Сливочное с кусочками черного шоколада
+                            </td>
+                            <td>1.5кг &#xD7;</td>
+                            <td class="weight-price">355 руб</td>
+                            <td>300 руб</td>
                         </tr>
                     </tr>
                 </table>
+                <p class="modal-cart-sum">
+                    Итого:
+                </p>
+                <button type="submit" class="button button-checkout">Оформить заказ</button>
             </form>
-            <button type="submit" class="button button-checkout">Оформить заказ</button>
         </section>
     </body>
 </html>

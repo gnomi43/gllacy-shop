@@ -298,13 +298,11 @@
                 </p>
                 <p>
                     <label class="visually-hidden" for="feedback-info">Введите сообщение</label>
-                    <input type="text" name="info" id="feedback-info" placeholder="Напишите что-нибудь...">
+                    <textarea readonly type="text" name="info" id="feedback-info" placeholder="Напишите что-нибудь..."></textarea>
                 </p>
                 <button type="submit" class="button button-modal-send">Отправить</button>
             </form>
-            <button type="button" class="modal-close">
-                <img src="img/cross-close.svg" alt="Кнопка закрытия окна отбратной связи">
-            </button>
+            <button type="button" class="modal-close"></button>
         </section>
         <section class="modal modal-login">
             <h3 class="visually-hidden">Вход в личный кабинет</h3>
@@ -329,15 +327,50 @@
             </form>
         </section>
         <section class="modal modal-search">
-            <form class="modal-search" action="https://echo.academy.ru" method="POST">
+            <form action="https://echo.academy.ru" method="POST">
                 <label for="site-search" class="visually-hidden">Поиск</label>
                 <input type="search" name="search" id="site-search" placeholder="Что ищем?" aria-label="Поиск по сайту">
             </form>
         </section>
-        <section class="modal moda-cart">
-            <form action=""></form>
-            <!-- ФОРМА ДЛЯ КОРЗИНЫ -->
-            <button type="submit" class="button button-checkout">Оформить заказ</button>
+        <section class="modal modal-cart">
+            <form action="https://echo.htmlacademy.ru">
+                <table>
+                        <tr>
+                            <td>
+                                <button type="button"></button>
+                            </td>
+                            <td>
+                                <img src="img/product-10.jpg" alt="Картинка пломбира с апельсиновым джемом" width="33" height="33">
+                            </td>
+                            <td>
+                                Пломбира с апельсиновым джемом
+                            </td>
+                            <td>1.5кг &#xD7;</td>
+                            <td class="weight-price">200 руб</td>
+                            <td>300 руб</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button type="button"></button>
+                            </td>
+                            <td>
+                                <img src="img/product-11.jpg" alt="Картинка пломбира с апельсиновым джемом" width="33" height="33">
+                            </td>
+                            <td>
+                                Сливочное с кусочками черного шоколада
+                            </td>
+                            <td>1.5кг &#xD7;</td>
+                            <td class="weight-price">355 руб</td>
+                            <td>300 руб</td>
+                        </tr>
+                    </tr>
+                </table>
+                <p class="modal-cart-sum">
+                    Итого:
+                </p>
+                <button type="submit" class="button button-checkout">Оформить заказ</button>
+            </form>
         </section>
+        <div class="overlay"></div>
     </body>
 </html>

@@ -323,7 +323,6 @@ input[type="radio"].visually-hidden{
 
     background-image: url("../img/cart-logo-hover.svg");
     background-repeat: no-repeat;
-    background-color: #e84d37;
     transition-duration: 0.5s;
 }
 
@@ -1238,42 +1237,261 @@ fieldset legend{
 }
 
 .modal-feedback{
-    padding: 18px 24px 27px 25px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+
+    display: none;
+
+    margin-top: -220px;
+    margin-left: -235px;
+    padding: 15px 25px;
 
     box-sizing: border-box;
-    width: 478px;
+    min-width: 478px;
+    min-height: 440px;
+
+    z-index: 100;
+}
+
+.overlay{
+    content: "";
+
+    display: none;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+}
+
+.modal-feedback p{
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+
 }
 
  .modal-feedback input{
+    padding: 10px 15px;
+
+    box-sizing: border-box;
+    min-width: 270px;
+
     font-size: 16px;
+    font-weight: 500;
     line-height: 24px;
+    
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 7px;
+ }
+
+ .modal-feedback textarea{
+    padding: 10px 15px;
+
+    box-sizing: border-box;
+    width: 430px;
+    min-height: 155px;
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 7px;
  }
 
  .button-modal-send{
-     display: block;
-     margin-left: auto;
+    display: block;
+    margin: 25px 0;
+    margin-left: auto;
  }
- 
-.modal-login{
-    padding: 20px 17px 22px 19px;
 
+.modal-close{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+
+    display: block;
     box-sizing: border-box;
-    width: 278px;
+    width: 20px;
+    height: 20px;
+
+    background: transparent;
+    border: none;
+
 }
 
- .modal-login input,
- .modal-search input{
-    font-size: 14px;
-    line-height: 24px;
+.modal-close::after,
+.modal-close::before{
+    content: "";
+
+    position: absolute;
+    top: 9px;
+    right: 0px;
+
+    display: block;
+    width: 20px;
+    height: 3px;
+
+    background-color: #231f20;
+    z-index: 20;
+}
+
+.modal-close::after{
+    transform: rotate(45deg);
+}
+
+.modal-close::before{
+    transform: rotate(-45deg);
+}
+
+.modal-login{
+    display: none;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+    width: 280px;
+    height: 215px;
+}
+
+.modal-login p{
+    margin: 0;
+    padding: 0;
+}
+
+ .modal-login input{
+    margin: 0;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+
+    box-sizing: border-box;
+    width: 100%;
+    height: 45px;
+
+    font: inherit;
+
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
+ }
+
+ .modal-login-controls{
+     margin: 0;
+     padding: 0;
  }
  
  .button-join{
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin: 0;
+    padding: 15px 25px;
+    
+    border-radius: 25px;
  }
  
- .modal-search{
-     padding: 13px 17px;
+.modal-search{
+    display: none;
+
+     padding: 20px 15px;
+
      box-sizing: border-box;
-     width: 343px;
+     width: 340px;
+     height: 85px;
  }
+
+.modal-search input{
+    margin: 0;
+    padding: 10px 15px;
+
+    width: 100%;
+    height: 45px;
+
+    font: inherit;
+
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
+ }
+
+.modal-cart{
+    display: none;
+    padding: 20px 15px;
+
+    box-sizing: border-box;
+    width: 540px
+ }
+
+.modal-cart table button{
+    position: relative;
+
+    width: 17px;
+    height: 17px;
+
+    background-color: transparent;
+    border: none;
+ }
+
+.modal-cart table button::before,
+.modal-cart table button::after{
+    content: "";
+
+    position: absolute;
+    top: 7px;
+    left: -1px;
+
+    width: 15px;
+    height: 2px;
+    
+    background-color: #231f20;
+ }
+
+ .modal-cart table button::after{
+    transform: rotate(45deg);
+ }
+
+ .modal-cart table button::before{
+    transform: rotate(-45deg);
+ }
+
+ .modal-cart table img{
+     height: 33px;
+     height: 33px;
+
+     border-radius: 50%;
+ }
+
+ .weight-price{
+     color: rgba(0, 0, 0, 0.4);
+ }
+
+ .modal-cart table{
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+
+    width: 100%;
+    
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 500;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+ }
+
+.modal-cart-sum{
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 700;
+    text-align: right;
+}
+
+.button-checkout{
+    display: block;
+    margin-left: auto;
+}
