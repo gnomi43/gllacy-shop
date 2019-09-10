@@ -16,18 +16,17 @@
                         alt="Логотип Глейси">
                     </a>
                     <ul class="site-navigation">
-                        <li><a href="catalog.html">Каталог</a></li>
-                        <li><a href="devlivery.html">Доставка и оплата</a></li>
-                        <li><a href="about-company.html">О Компании</a></li>
+                        <li><a class="button-nav" href="catalog-creamy.html">Каталог</a></li>
+                        <li><a class="button-nav" href="devlivery.html">Доставка и оплата</a></li>
+                        <li><a class="button-nav" href="about-company.html">О Компании</a></li>
                     </ul>
-                    <ul>
+                    <ul class="user-navigation">
                         <li>
-                            <button class="search-button" type="button">
-                                <img src="img/search.svg" alt="Иконка поиска">
+                            <button class="button-user search-button" type="button">
                             </button>
                         </li>
-                        <li><button class="login-button" type="button">Вход</button></li>
-                        <li><button class="cart-button" type="button">Корзина</button></li>
+                        <li><button class="button-user login-button" type="button">Вход</button></li>
+                        <li><button class="button-user cart-button" type="button">Корзина</button></li>
                     </ul>
                 </div>
            </nav>
@@ -40,39 +39,42 @@
                 </div>
             </div>
         </header>
-        <main class="container">
-            <h1 class="visually-hidden">Магазин мороженного Глейси</h1>
-
-            <section class="slider">
-                <div class="slider-content">
-                    <p class="slider-active">Крем-брюле и пломбир с малиновым джемом</p>
-                    <!-- <p class="visually-hidden">Шоколадный пломбир и лимонный сорбет</p> 
-                    <p class="visually-hidden">Пломбир с помадкой и клубничный щербет</p> -->
-                </div>
-                
-                <div class="slider-nav-wrapper">
-                    <ul class="slider-dots">
-                        <li>
-                            <button class="visually-hidden slider-dot-active" type="button">
-                                Первый слайд
-                            </button>
+        <main>
+            <input class="ice-dots" type="radio" id="product-1" name="toggle" checked>
+            <input class="ice-dots" type="radio" id="product-2" name="toggle">
+            <input class="ice-dots" type="radio" id="product-3" name="toggle">
+            <div class="slider-wrapper">
+                <section class="slider">
+                    <div class="slider-control">
+                        <label for="product-1">Первый</label>
+                        <label for="product-2">Второй</label>
+                        <label for="product-3">Третий</label>
+                    </div>
+                    <ul class="slider-list">
+                        <li class="slider-item slide" id="slide1">
+                            <h3 class="slider-title">
+                                Крем-брюле и пломбир с малиновым джемом
+                            </h3>
+                            <a class="button slider-button button-info-ice" href="#">Давайте оба!</a>
                         </li>
-                        <li>
-                            <button class="visually-hidden slider-dot" type="button">
-                                Второй слайд
-                            </button>
+                        <li class="slider-item slide" id="slide2">
+                            <h3 class="slider-title">
+                                Шоколадный пломбир и лимнный сорбет
+                            </h3>
+                            <a class="button slider-button button-info-ice" href="#">Давайте оба!</a>
                         </li>
-                        <li>
-                            <button class="visually-hidden slider-dot" type="button">
-                                Третий слайд
-                            </button>
+                        <li class="slider-item slide" id="slide3">
+                            <h3 class="slider-title">
+                                Пломбир с помадкой и клубничным щербет
+                            </h3>
+                            <a class="button slider-button button-info-ice" href="#">Давайте оба!</a>
                         </li>
                     </ul>
-                    
-                    <a class="button button-info-ice">Давайте оба!</a>
-                </div>
-            </section>
-
+                </section>
+            </div>
+            <div class="container">
+            <h1 class="visually-hidden">Магазин мороженного Глейси</h1>
+            
             <section class="gift">
                 <h2 class="visually-hidden">Акция</h2>
                 <div class="index-columns">
@@ -209,7 +211,7 @@
                             <p>
                                 <form action="https://echo.htmlacademy.ru">
                                     <label class="visually-hidden" for="subscription-email">Электронная почта</label>
-                                    <input type="email" name="subscription" id="subscription-email" 
+                                    <input class="subscription-input" type="email" name="subscription" id="subscription-email" 
                                     placeholder="Электронная почта" aria-label="Для подписки на нашу рассылку введите электронную почту" >
                                     <button type="submit" class="button button-sub">Отправить</button>
                                 </form>
@@ -238,6 +240,7 @@
                         </div>
                     </div>
                 </section>
+            </div>
         </main>
         <footer class="main-footer container">
             <ul class="footer-social">
@@ -303,15 +306,6 @@
                 <img src="img/cross-close.svg" alt="Кнопка закрытия окна отбратной связи">
             </button>
         </section>
-        <!-- <section class="modal modal-menu">
-            <ul class="modal-menu-list">
-                <li><a class="modal-menu-item" href="#"><b>Новинки</b></a></li>
-                <li><a class="modal-menu-item" href="#">Сливочное</a></li>
-                <li><a class="modal-menu-item-active" href="#">Щербеты</a></li>
-                <li><a class="modal-menu-item" href="#">Фруктовый лёд</a></li>
-                <li><a class="modal-menu-item" href="#">Мелорин</a></li>
-            </ul>
-        </section> -->
         <section class="modal modal-login">
             <h3 class="visually-hidden">Вход в личный кабинет</h3>
             <form action="https://echo.htmlacademy.ru" method="POST">
