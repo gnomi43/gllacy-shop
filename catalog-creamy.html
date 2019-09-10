@@ -16,18 +16,17 @@
                         alt="Логотип Глейси">
                     </a>
                     <ul class="site-navigation">
-                        <li class="site-navigation-active"><a href="catalog.html">Каталог</a></li>
-                        <li><a href="devlivery.html">Доставка и оплата</a></li>
-                        <li><a href="about-company.html">О Компании</a></li>
+                        <li><a class="button-nav site-nav-active" href="catalog.html">Каталог</a></li>
+                        <li><a class="button-nav" href="devlivery.html">Доставка и оплата</a></li>
+                        <li><a class="button-nav" href="about-company.html">О Компании</a></li>
                     </ul>
-                    <ul>
+                    <ul class="user-navigation">
                         <li>
-                            <button class="search-button" type="button">
-                                <img src="img/search.svg" alt="Иконка поиска">
+                            <button class="button-user search-button" type="button">
                             </button>
                         </li>
-                        <li><button class="login-button" type="button">Вход</button></li>
-                        <li><button class="cart-button" type="button">Корзина</button></li>
+                        <li><button class="button-user login-button" type="button">Вход</button></li>
+                        <li><button class="button-user cart-button" type="button">Корзина</button></li>
                     </ul>
                 </div>
            </nav>
@@ -61,29 +60,29 @@
                                 </select>
                         </fieldset>
                         <fieldset>
-                            <legend>Цена</legend>
-                            <input class="filter-range" type="range-min-max" name="price"
+                            <legend>Цена:</legend>
+                            <input class="filter-range filter-range-min" type="range-min-max" name="price"
                             min="0" max="1000" step="100" value="0" size="5">
-                            <input class="filter-range" type="range-max" name="price"
+                            <input class="filter-range filter-range-max" type="range-max" name="price"
                             min="0" max="1000" step="100" value="1000" size="5">
                         </fieldset>
                         <fieldset>
                             <legend>Жирность:</legend>
                             <ul class="fat">
                                 <li>
-                                    <input class="vissualy-hidden" type="radio" name="fat" id="fat-value-0" checked>
+                                    <input class="visually-hidden button-radio" type="radio" name="fat" id="fat-value-0" checked>
                                     <label for="fat-value-0">0%</label>
                                 </li>
                                 <li>
-                                    <input class="vissualy-hidden" type="radio" name="fat" id="fat-value-10">
+                                    <input class="visually-hidden button-radio" type="radio" name="fat" id="fat-value-10">
                                     <label for="fat-value-10">до 10%</label>
                                 </li>
                                 <li>
-                                    <input class="vissualy-hidden" type="radio" name="fat" id="fat-value-30">
+                                    <input class="visually-hidden button-radio" type="radio" name="fat" id="fat-value-30">
                                     <label for="fat-value-30">до 30%</label>
                                 </li>
                                 <li>
-                                    <input class="vissualy-hidden" type="radio" name="fat" id="fat-value-more">
+                                    <input class="visually-hidden button-radio" type="radio" name="fat" id="fat-value-more">
                                     <label for="fat-value-more">выше 30%</label>
                                 </li>
                             </ul>
@@ -92,23 +91,23 @@
                             <legend>Наполнители:</legend>
                             <ul class="fillers">
                                 <li>
-                                    <input class="visually-hidden" type="checkbox" name="chocolate" id="fillers-chocolate" checked>
+                                    <input class="visually-hidden button-checkbox" type="checkbox" name="chocolate" id="fillers-chocolate" checked>
                                     <label for="fillers-chocolate">Шоколадные</label>
                                 </li>
                                 <li>
-                                    <input class="visually-hidden" type="checkbox" name="shugar" id="fillers-shugar" checked>
+                                    <input class="visually-hidden button-checkbox" type="checkbox" name="shugar" id="fillers-shugar" checked>
                                     <label for="fillers-shugar">Сахарные прсыпки</label>
                                 </li>
                                 <li>
-                                    <input class="visually-hidden" type="checkbox" name="fruits" id="fillers-fruits">
+                                    <input class="visually-hidden button-checkbox" type="checkbox" name="fruits" id="fillers-fruits">
                                     <label for="fillers-fruits">Фрукты</label>
                                 </li>
                                 <li>
-                                    <input class="visually-hidden" type="checkbox" name="syrups" id="fillers-syrups">
+                                    <input class="visually-hidden button-checkbox" type="checkbox" name="syrups" id="fillers-syrups">
                                     <label for="fillers-syrups">Сиропы</label>
                                 </li>
                                 <li>
-                                    <input class="visually-hidden" type="checkbox" name="jams" id="fillers-jams">
+                                    <input class="visually-hidden button-checkbox" type="checkbox" name="jams" id="fillers-jams">
                                     <label for="fillers-jams">Джемы</label>
                                 </li>
                             </ul>
@@ -130,7 +129,7 @@
                             </p>
                         </a>
                         <p class="catalog-item-price">
-                            <b>310 &#8381 <span class="weight-item">/кг</span></b>
+                            <b>310 &#8381<span class="weight-item">/кг</span></b>
                         </p>
                         <a class="button button-catalog" href="#">Быстрый просмотр</a>
                     </li>
@@ -145,7 +144,7 @@
                             </p>
                         </a>
                         <p class="catalog-item-price">
-                            <b>380 &#8381 <span class="weight-item">/кг</span></b>
+                            <b>380 &#8381<span class="weight-item">/кг</span></b>
                         </p>
                         <a class="button button-catalog" href="#">Быстрый просмотр</a>
                     </li>
@@ -159,7 +158,7 @@
                             </p>
                         </a>
                         <p class="catalog-item-price">
-                            <b>355 &#8381 <span class="weight-item">/кг</span></b>
+                            <b>355 &#8381<span class="weight-item">/кг</span></b>
                         </p>
                         <a class="button button-catalog" href="#">Быстрый просмотр</a>
                     </li>
@@ -174,7 +173,7 @@
                             </p>
                         </a>
                         <p class="catalog-item-price">
-                            <b>415 &#8381 <span class="weight-item">/кг</span></b>
+                            <b>415 &#8381<span class="weight-item">/кг</span></b>
                         </p>
                         <a class="button button-catalog" href="#">Быстрый просмотр</a>
                     </li>
@@ -187,7 +186,7 @@
                             </p>
                         </a>
                         <p class="catalog-item-price">
-                                <b>325 &#8381 <span class="weight-item">/кг</span></b>
+                                <b>325 &#8381<span class="weight-item">/кг</span></b>
                         </p>
                         <a class="button button-catalog" href="#">Быстрый просмотр</a>
                     </li>
@@ -200,7 +199,7 @@
                             </p>
                         </a>
                         <p class="catalog-item-price">
-                            <b>410 &#8381 <span class="weight-item">/кг</span></b>
+                            <b>410 &#8381<span class="weight-item">/кг</span></b>
                         </p>
                         <a class="button button-catalog" href="#">Быстрый просмотр</a>
                     </li>
@@ -213,7 +212,7 @@
                             </p>
                         </a>
                         <p class="catalog-item-price">
-                            <b>375 &#8381 <span class="weight-item">/кг</span></b>
+                            <b>375 &#8381<span class="weight-item">/кг</span></b>
                         </p>
                         <a class="button button-catalog" href="#">Быстрый просмотр</a>
                     </li>
@@ -226,7 +225,7 @@
                             </p>
                         </a>
                         <p class="catalog-item-price">
-                            <b>320 &#8381 <span class="weight-item">/кг</span></b>
+                            <b>320 &#8381<span class="weight-item">/кг</span></b>
                         </p>
                         <a class="button button-catalog" href="#">Быстрый просмотр</a>
                     </li>
@@ -239,7 +238,7 @@
                             </p>
                         </a>
                         <p class="catalog-item-price">
-                            <b>440 &#8381 <span class="weight-item">/кг</span></b>
+                            <b>440 &#8381<span class="weight-item">/кг</span></b>
                         </p>
                         <a class="button button-catalog" href="#">Быстрый просмотр</a>
                     </li>
@@ -252,7 +251,7 @@
                             </p>
                         </a>
                         <p class="catalog-item-price">
-                            <b>435 &#8381 <span class="weight-item">/кг</span></b>
+                            <b>435 &#8381<span class="weight-item">/кг</span></b>
                         </p>
                         <a class="button button-catalog" href="#">Быстрый просмотр</a>
                     </li>
@@ -265,7 +264,7 @@
                             </p>
                         </a>
                         <p class="catalog-item-price">
-                            <b>355 &#8381 <span class="weight-item">/кг</span></b>
+                            <b>355 &#8381<span class="weight-item">/кг</span></b>
                         </p>
                         <a class="button button-catalog" href="#">Быстрый просмотр</a>
                     </li>
@@ -278,19 +277,19 @@
                             </p>
                         </a>
                         <p class="catalog-item-price">
-                            <b>420 &#8381 <span class="weight-item">/кг</span></b>
+                            <b>420 &#8381<span class="weight-item">/кг</span></b>
                         </p>
                         <a class="button button-catalog" href="#">Быстрый просмотр</a>
                     </li>
                 </ul>
                 <ul class="pagination-list">
-                    <li class="pagination-item"><a href="#">&#10216;</a></li>
-                    <li class="pagination-item-active"><a href="#">1</a></li>
-                    <li class="pagination-item"><a href="#">2</a></li>
-                    <li class="pagination-item"><a href="#">3</a></li>
-                    <li class="pagination-item"><a href="#">4</a></li>
-                    <li class="pagination-item"><a href="#">5</a></li>
-                    <li class="pagination-item"><a href="#">&#10217;</a></li>
+                    <li><a class="pagination-item"  href="#">&#10216;</a></li>
+                    <li><a class="pagination-item pagination-item-active" href="#">1</a></li>
+                    <li><a class="pagination-item" href="#">2</a></li>
+                    <li><a class="pagination-item" href="#">3</a></li>
+                    <li><a class="pagination-item" href="#">4</a></li>
+                    <li><a class="pagination-item" href="#">5</a></li>
+                    <li><a class="pagination-item" href="#">&#10217;</a></li>
                 </ul>
             </section>
         </main>
@@ -298,17 +297,17 @@
             <ul class="footer-social">
                 <li>
                     <a class="social-button" href="https://twitter.com">
-                        <img src="img/twitter.svg" alt="Твитера">
+                        <img src="img/twitter.svg" alt="Твитер">
                     </a>
                 </li>
                 <li>
                     <a class="social-button" href="https://instahram.com">
-                        <img src="img/instagram.svg" alt="Инстаграма">
+                        <img src="img/instagram.svg" alt="Инстаграм">
                     </a>
                 </li>
                 <li>
                     <a class="social-button" href="https://facebook.com">
-                        <img src="img/facebook.svg" alt="Фейсбука">
+                        <img src="img/facebook.svg" alt="Фейсбук">
                     </a>
                 </li>
                 <li>
@@ -345,6 +344,7 @@
                 <li><a class="modal-menu-item" href="#">Мелорин</a></li>
             </ul>
         </section> -->
+
         <section class="modal modal-login">
             <h3 class="visually-hidden">Вход в личный кабинет</h3>
             <form class="modal-login" action="https://echo.htmlacademy.ru" method="POST">
